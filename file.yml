@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: create file on all nodes
+    file:
+     path: /home/jenkins/ramu.txt
+     state: touch
