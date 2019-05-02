@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install apache on all nodes
+    apt:
+     name: apache2
+     state: present
+     
+     
