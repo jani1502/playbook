@@ -1,0 +1,10 @@
+---
+- hosts: webserver
+  become: yes
+  vars:
+    var1: devops
+    var2: Aws
+  tasks:
+  - name: disply results
+    debug:
+      msg: "{'var1', 'var2'}"
