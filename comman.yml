@@ -10,4 +10,15 @@
     debug:
      msg: "{myresult}"
 
-     
+  - name: install git on machine
+    apt:
+     name: git
+     state: present
+    when: myresult.stderr ==""
+
+  - name: install tree on machine
+    apt:
+     name: tree
+     state: present
+    when: myresult.stderr !=""
+    
