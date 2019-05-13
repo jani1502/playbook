@@ -1,0 +1,4 @@
+---
+  - name: create a file on node
+    path: /home/jenkins/ramu1.txt
+    state: touch
