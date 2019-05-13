@@ -1,0 +1,13 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: display host of sysytem
+    command: hostname -f
+    register: myresult
+
+  - name: display the result
+    debug:
+     msg: "{myresult}"
+
+     
